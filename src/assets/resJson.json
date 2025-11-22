@@ -1,4 +1,44 @@
-{
+[{   
+    "id": 1,
+    "name":{
+        "first":"John",
+        "last":"Doe"
+    },
+    "age":25,
+    "address":"123 Main St",
+    "phoneNumbers":[
+        {
+            "type":"home",
+            "number":"555-1234"
+        },
+        {
+            "type":"mobile",
+            "number":"555-5678"
+        }
+    ]
+},
+{   
+    "id": 2,
+    "name":{
+        "first":"John",
+        "last":"Doe"
+    },
+    "age":25,
+    "address":"123 Main St",
+    "phoneNumbers":[
+        {
+            "type":"home",
+            "number":"555-1234"
+        },
+        {
+            "type":"mobile",
+            "number":"555-5678"
+        }
+    ]
+},
+
+{   
+    "id": 3,
     "name":{
         "first":"John",
         "last":"Doe"
@@ -16,3 +56,4 @@
         }
     ]
 }
+]
