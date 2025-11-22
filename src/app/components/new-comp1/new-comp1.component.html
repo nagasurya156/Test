@@ -1,0 +1,18 @@
+<p>new-comp1 works!</p>
+
+<form>
+  <label for="name">Name:</label>
+  <input id="name" type="text" [formControl]="nameControl" />
+
+  <h4>Signal Array Values:</h4>
+  <ul>
+    <li *ngFor="let item of nameSignal()">{{ item }}</li>
+  </ul>
+
+  <button type="button" (click)="addtoArr()">Add</button>
+</form>
+
+<h4>All Arrays Added:</h4>
+<ul>
+  <li *ngFor="let group of Arr">{{ group }}</li>
+</ul>

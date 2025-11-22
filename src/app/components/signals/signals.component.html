@@ -1,1 +1,14 @@
-<div class="col-2">signals works {{inputName()}}!</div>
+<div style="text-align: center;">signals works {{inputName()}}!</div>
+
+<div class="input-container">
+  <input #input
+    type="number"
+    [value]="id"
+    placeholder="enter id to search"
+  />
+  </div>
+    <!-- (input)="setInputName($event)" -->
+
+  <div *ngFor="let data of serviceData">
+    <span>{{data['id']}}</span>
+  </div>
