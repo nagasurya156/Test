@@ -1,3 +1,8 @@
+<form class='centerAlign' [formGroup]="myForm">
+
+    <input type="text" formControlName="myInput" placeholder="enter string">
+    <button type="submit" (click)="addString()">AddHere</button>
+</form>
 
 
 <input type="text" placeholder="enter task" [(ngModel)]="newTask">

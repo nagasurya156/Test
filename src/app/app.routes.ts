@@ -21,5 +21,9 @@ export const routes: Routes = [
     {
         path:"crud",
         component: NewComp2Component,
+    },
+    {
+        path:"sample",
+        component: SampleCompComponent,
     }
 ];
