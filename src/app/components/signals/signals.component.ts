@@ -24,10 +24,7 @@ export class SignalsComponent implements AfterViewInit {
     let a="boy walking";
     console.log(typeof("surya"), a.includes("sur")); 
     console.warn(typeof("surya"), a.includes("sur")); 
-    console.error(typeof("surya"), a.includes("sur")); 
-
-
-    
+    console.error(typeof("surya"), a.includes("sur"));
   }    
   ngOnInit(){
   let a:any []=[[1,2,3],[4,5,6],[7,8,[9]],11,23];

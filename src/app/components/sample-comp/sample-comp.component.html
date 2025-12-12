@@ -1,1 +1,15 @@
-<p>sample-comp works!</p>
+<div class="align">
+<form [formGroup]="myForm">
+    <input type="text" formControlName="inputField" >
+    <button type="submit" [disabled]='myForm.invalid' (click)="clickFn()">add</button>
+    <br>
+    <ul>
+        <li *ngFor="let list of listItems;let index=index">
+            {{list}} <span>
+            <button type="button"  (click)="deleteFn(list,index)">delete</button>
+            </span>
+        </li>
+    </ul>
+    
+</form>
+</div>
