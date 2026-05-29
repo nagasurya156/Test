@@ -26,6 +26,7 @@ export class NewComp2Component {
  })
  }
  addTask(){
+this.newTask=this.myForm.value['myInput']
 if(this.fromEdit){
  this.tasks.splice(this.index1,1,this.newTask)
 //  this.tasks.splice()
@@ -34,7 +35,7 @@ else{
   this.tasks.push(this.newTask)
 }
   this.newTask='';
-
+  this.fromEdit=false;
  }
  delete(index:number){
   this.tasks.splice(index,1)
@@ -45,9 +46,9 @@ else{
   this.myForm.patchValue({myInput:this.tasks[index]})
   this.newTask=this.tasks[index]
  }
- addString(){
-  this.tasks.push(this.myForm.value['myInput'])
- }
+//  addString(){
+//   this.tasks.push(this.myForm.value['myInput'])
+//  }
  async callService(){
 
   fetch("https://api.github.com/users/emails").then((response)=>response.json()).then(res=>{console.log('fetch',res)})

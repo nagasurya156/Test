@@ -1,16 +1,16 @@
 <form class='centerAlign' [formGroup]="myForm">
-
+    <div>
     <input type="text" formControlName="myInput" placeholder="enter string">
-    <button type="submit" (click)="addString()">AddHere</button>
-</form>
-
-
-<input type="text" placeholder="enter task" [(ngModel)]="newTask">
-<button (click)="addTask()">Add</button>
-<ul>
+    <button type="submit" (click)="addTask()">AddHere</button></div>
+    <div><ul>
     <li *ngFor="let task of tasks;let i=index">
         {{task}}
         <button (click)="delete(i)">delete</button>
         <button (click)="edit(i)">edit</button>
     </li>
-</ul>
+</ul></div>
+</form>
+
+<!-- 
+<input type="text" placeholder="enter task" [(ngModel)]="newTask">
+<button (click)="addTask()">Add</button> -->
