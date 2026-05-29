@@ -4,6 +4,7 @@ import { debounceTime, distinctUntilChanged, filter, map, mergeMap, startWith, s
 import { CommonModule } from '@angular/common'; 
 import { firstValueFrom, fromEvent, Observable } from 'rxjs';
 import  axios  from 'axios';
+import { Subject, BehaviorSubject } from 'rxjs';
 export interface User {id:number}
 
 @Component({
@@ -25,6 +26,27 @@ export class SignalsComponent implements AfterViewInit {
     console.log(typeof("surya"), a.includes("sur")); 
     console.warn(typeof("surya"), a.includes("sur")); 
     console.error(typeof("surya"), a.includes("sur"));
+// Subject example
+const subject = new Subject<number>();
+subject.subscribe(value => console.log('Subject Subscriber A:', value));
+subject.next(1); // Output: Subscriber A: 1
+subject.subscribe(value => console.log('Subject Subscriber B:', value));
+subject.next(2); // Output: Subscriber A: 2, Subscriber B: 2
+subject.subscribe(value => console.log('Subject Subscriber c:', value));
+subject.next(3); 
+subject.subscribe(value => console.log('Subject Subscriber d:', value));
+subject.next(4); 
+
+// BehaviorSubject example
+const behaviorSubject = new BehaviorSubject<number>(0); // Initial value: 0
+behaviorSubject.subscribe(value => console.log('behaviorSubject Subscriber A:', value));
+behaviorSubject.next(1); // Output: Subscriber A: 1
+behaviorSubject.subscribe(value => console.log('behaviorSubject Subscriber B:', value));
+behaviorSubject.next(2); // Output: Subscriber A: 2, Subscriber B: 2
+behaviorSubject.subscribe(value => console.log('behaviorSubject Subscriber c:', value));
+behaviorSubject.next(3); // Output: Subscriber A: 2, Subscriber B: 2
+behaviorSubject.subscribe(value => console.log('behaviorSubject Subscriber d:', value));
+behaviorSubject.next(4); 
   }    
   ngOnInit(){
   let a:any []=[[1,2,3],[4,5,6],[7,8,[9]],11,23];
